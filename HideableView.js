@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Animated, View  } from 'react-native';
+import { Animated  } from 'react-native';
 
 class HideableView extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class HideableView extends Component {
   }
 
   animate(show) {
-    const duration = this.props.duration ? parseInt(this.props.duration) : 666;
+    const duration = this.props.duration ? parseInt(this.props.duration) : 500;
     Animated.timing(
       this.state.opacity, {
         toValue: show ? 1 : 0,
@@ -31,7 +31,7 @@ class HideableView extends Component {
 
   render() {
     if (this.props.removeWhenHidden) {
-      return ({this.visible && this.props.children});
+      return (this.visible && this.props.children);
     }
     return (
       <Animated.View style={{opacity: this.state.opacity}}>
@@ -41,7 +41,7 @@ class HideableView extends Component {
   }
 }
 
-HideawayView.propTypes = {
+HideableView.propTypes = {
   visible: PropTypes.bool.isRequired,
   duration: PropTypes.number,
   removeWhenHidden: PropTypes.bool,
