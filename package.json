@@ -10,12 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/osagie/react-native-hideable-view.git"
   },
+  "dependencies": {
+    "react": ">=15.2.0",
+    "react-native": ">=0.29.0"
+  },
   "keywords": [
     "react-native",
     "hide",
     "toggle"
   ],
-  "author": "@OSAGIETHEGREAT",
+  "author": "Osagie Edebiri (http://osagiethegreat.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/osagie/react-native-hideable-view/issues"
