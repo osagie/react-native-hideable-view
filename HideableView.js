@@ -30,11 +30,12 @@ class HideableView extends Component {
   }
 
   render() {
-    if (this.props.removeWhenHidden) {
-      return (this.visible && this.props.children);
+    if (this.props.removeWhenHidden && !this.props.visible) {
+      return null;
     }
+
     return (
-      <Animated.View style={{opacity: this.state.opacity}}>
+      <Animated.View style={[this.props.style, {opacity: this.state.opacity}]}>
         {this.props.children}
       </Animated.View>
     )
