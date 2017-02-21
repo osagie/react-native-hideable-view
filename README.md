@@ -55,7 +55,7 @@ class Example extends Component {
                 <Text style={styles.title}>
                     I am always here.
                 </Text>
-                <HideableView hidden={this.state.hidden}>
+                <HideableView visible={this.state.visible}>
                     <Text>
                       I appear and disappear at your behest.
                     </Text>
